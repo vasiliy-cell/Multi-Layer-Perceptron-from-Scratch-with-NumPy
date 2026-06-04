@@ -11,28 +11,28 @@ The graphs below show the behavior for different learning rates. The trend is fa
 
 ------
 # a=0.1
-<img src="./pictures/a=0.1.png" alt="a=0.1" width="60%">
+<img src="./pictures/a=0.1.png" alt="a=0.1" width="80%">
 
 ------
 # a=0.5
-<img src="./pictures/a=0.5.png" alt="a=0.5" width="60%">
+<img src="./pictures/a=0.5.png" alt="a=0.5" width="80%">
 
 ------
 # a=0.9
-<img src="./pictures/a=0.9.png" alt="a=0.9" width="60%">
+<img src="./pictures/a=0.9.png" alt="a=0.9" width="80%">
 
 ------
 # a=5.0
-<img src="./pictures/a=5.png" alt="a=5.0" width="60%">
+<img src="./pictures/a=5.png" alt="a=5.0" width="80%">
 
 ------
 # a=10.0
-<img src="./pictures/a=10.png" alt="a=10.0" width="60%">
+<img src="./pictures/a=10.png" alt="a=10.0" width="80%">
 
 ------
 # a=20.0
-<img src="./pictures/a=20.png" alt="a=20.0" width="60%">
+<img src="./pictures/a=20.png" alt="a=20.0" width="80%">
 
 ------
 # bergog
-<img src="./pictures/585at8.png" alt="bergog" width="60%">
+<img src="./pictures/585at8.png" alt="bergog" width="80%">
