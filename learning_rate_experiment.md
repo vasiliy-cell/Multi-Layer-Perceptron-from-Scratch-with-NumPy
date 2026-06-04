@@ -1,4 +1,4 @@
-After some experiments and basic research, I found that the best learning rate (a) is usually around 7 to 9. Below are several graphs that illustrate the results.
+After some experiments and basic research, I found that the best learning rate is usually around 7 to 9. Below are several graphs that illustrate the results.
 
 Larger values can sometimes achieve a lower loss, but they are much less stable. Depending on the random initialization, they may produce either excellent or very poor results. When the learning rate becomes too large (greater than 10), training failures occur much more frequently.
 
@@ -10,27 +10,27 @@ The graphs below show the behavior for different learning rates. The trend is fa
 
 
 ------
-# a=0.1
+# learning rate=0.1
 <img src="./pictures/a=0.1.png" alt="a=0.1" width="80%">
 
 ------
-# a=0.5
+# learning rate=0.5
 <img src="./pictures/a=0.5.png" alt="a=0.5" width="80%">
 
 ------
-# a=0.9
+# learning rate=0.9
 <img src="./pictures/a=0.9.png" alt="a=0.9" width="80%">
 
 ------
-# a=5.0
+# learning rate=5.0
 <img src="./pictures/a=5.png" alt="a=5.0" width="80%">
 
 ------
-# a=10.0
+# learning rate=10.0
 <img src="./pictures/a=10.png" alt="a=10.0" width="80%">
 
 ------
-# a=20.0
+# learning rate=20.0
 <img src="./pictures/a=20.png" alt="a=20.0" width="80%">
 
 ------
