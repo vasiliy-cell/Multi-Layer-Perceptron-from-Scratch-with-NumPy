@@ -1,8 +1,11 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 # =====================================
 # DATA
 # =====================================
+loss_history = []
+
 
 input_data = [
     [0, 0],
@@ -47,7 +50,7 @@ b2 = np.random.uniform(-0.5, 0.5, (1, 1))
 # TRAINING LOOP
 # =====================================
 
-for epoch in range(10000):
+for epoch in range(30000):
 
     # ==============================
     # INPUT
@@ -75,6 +78,7 @@ for epoch in range(10000):
     # ==============================
     # FORWARD
     # ==============================
+
     z1 = W1 @ x + b1
     a1 = sigmoid(z1)
 
@@ -82,7 +86,7 @@ for epoch in range(10000):
     y_pred = sigmoid(z2)
 
     loss = (y_pred - y_target) ** 2
-
+    loss_history.append(loss.item())
     # ==============================
     # BACKPROP
     # ==============================
@@ -108,7 +112,7 @@ for epoch in range(10000):
     b1 -= learning_rate * db1
 
     # ==============================
-    # BEAUTIFUL LOGGING
+    # LOGGING
     # ==============================
     if epoch % 200 == 0:
         print("\n" + "=" * 60)
@@ -130,3 +134,44 @@ for epoch in range(10000):
         print(np.round(W2, 4))
 
         print("=" * 60)
+
+
+# =====================================
+# VISUALIZATION
+# =====================================
+print("\nTraining complete. Preparing the plot...")
+
+# Configure a stylish dark background theme
+plt.style.use('dark_background')
+fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
+
+# Main line (original noisy loss with high transparency)
+epochs_range = range(len(loss_history))
+ax.plot(epochs_range, loss_history, color='#17becf', alpha=0.15, label='Original Loss')
+
+# Smoothed line (moving average for a clean trend line)
+# Calculating the average every 500 epochs to eliminate SGD noise
+window_size = 500
+if len(loss_history) > window_size:
+    smooth_loss = np.convolve(loss_history, np.ones(window_size)/window_size, mode='valid')
+    smooth_epochs = range(window_size - 1, len(loss_history))
+    ax.plot(smooth_epochs, smooth_loss, color='#ff7f0e', linewidth=2, label=f'Smoothed Loss (MA {window_size})')
+
+# Grid and axis customization
+ax.set_title('Neural Network Training Progress (XOR)', fontsize=14, fontweight='bold', pad=15)
+ax.set_xlabel('Epoch', fontsize=12, labelpad=10)
+ax.set_ylabel('Loss (MSE)', fontsize=12, labelpad=10)
+ax.grid(True, linestyle='--', alpha=0.3, color='gray')
+
+# Legend setup
+ax.legend(loc='upper right', frameon=True, facecolor='#222222', edgecolor='none')
+
+# Visual badge showing the final Loss value
+final_loss = loss_history[-1]
+textstr = f'Final Loss: {final_loss:.6f}'
+props = dict(boxstyle='round,pad=0.5', facecolor='#222222', alpha=0.8, edgecolor='#ff7f0e')
+ax.text(0.05, 0.15, textstr, transform=ax.transAxes, fontsize=11, verticalalignment='top', bbox=props)
+
+# Automatically adjust layout and render the plot
+plt.tight_layout()
+plt.show()
