@@ -8,33 +8,31 @@ My hypothesis is that larger learning rates have such a strong positive effect b
 
 The graphs below show the behavior for different learning rates. The trend is fairly clear from the visual results.
 
+
 ------
 # a=0.1
-![a=0.1](./pictures/a=0.1.png)
+<img src="./pictures/a=0.1.png" alt="a=0.1" width="60%">
 
 ------
 # a=0.5
-![a=0.1](./pictures/a=0.5.png)
-
+<img src="./pictures/a=0.5.png" alt="a=0.5" width="60%">
 
 ------
 # a=0.9
-![a=0.1](./pictures/a=0.9.png)
-
+<img src="./pictures/a=0.9.png" alt="a=0.9" width="60%">
 
 ------
 # a=5.0
-![a=0.1](./pictures/a=5.png)
+<img src="./pictures/a=5.png" alt="a=5.0" width="60%">
 
 ------
 # a=10.0
-![a=0.1](./pictures/a=10.png)
-
+<img src="./pictures/a=10.png" alt="a=10.0" width="60%">
 
 ------
 # a=20.0
-![a=0.1](./pictures/a=20.png)
+<img src="./pictures/a=20.png" alt="a=20.0" width="60%">
 
 ------
 # bergog
-![a=0.1](./pictures/585at8.png)
+<img src="./pictures/585at8.png" alt="bergog" width="60%">
