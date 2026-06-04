@@ -20,7 +20,7 @@ current_input_index = 0
 # HYPERPARAMETERS
 # =====================================
 
-learning_rate = 0.1
+learning_rate = 8.0
 
 # =====================================
 # ACTIVATIONS
@@ -50,7 +50,7 @@ b2 = np.random.uniform(-0.5, 0.5, (1, 1))
 # TRAINING LOOP
 # =====================================
 
-for epoch in range(30000):
+for epoch in range(20000):
 
     # ==============================
     # INPUT
