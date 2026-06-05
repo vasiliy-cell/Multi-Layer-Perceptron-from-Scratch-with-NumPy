@@ -34,5 +34,4 @@ The graphs below show the behavior for different learning rates. The trend is fa
 <img src="./pictures/a=20.png" alt="a=20.0" width="80%">
 
 ------
-# bergog
 <img src="./pictures/585at8.png" alt="bergog" width="80%">
